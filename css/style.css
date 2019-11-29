@@ -5,6 +5,11 @@
   src: url(lasvegas-jackpot.ttf);
 }
 
+@font-face {
+  font-family: groovy;
+  src: url(groovy.ttf)
+}
+
 body {
 	/* Popup container */
 .popup {
