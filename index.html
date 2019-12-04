@@ -62,7 +62,7 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2 site-logo">
-            <h1 class="mb-0 text-white font-weight-light"><a href="#inicio" class="text-white h2 mb-0" style="font-family:groovy">Interact Club</a></h1>
+            <h1 class="mb-0 text-white font-weight-light"><a href="#inicio" class="text-white h2 mb-0" style="font-family:groovy; font-size:50%">Interact Club</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -116,13 +116,46 @@
         <div class="row mb-5">
           
           <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="images/minions5.png" alt="Image" class="img-fluid rounded">
+            <img src="images/1paz.png" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-6 order-md-1" data-aos="fade-up">
             <div class="text-left pb-1 border-primary mb-4">
-              <h2 class="text-primary">Local do Evento</h2>
+              <h2 class="text-primary">Contagem Regressiva</h2>
             </div>
-            <p>O evento será sediado na APAE Ponte Nova, localizado na Avenida Dr. Cristiano Freitas Castro, número 760, bairro C.D.I. na cidade de Ponte Nova - Minas Gerais.</p>            
+            <!-- Display the countdown timer in an element -->
+            <center><p style="font-family:groovy; font-size:32px" id="demo"></p></center>
+            
+            <script>
+              // Set the date we're counting down to
+              var countDownDate = new Date("Mar 6, 2020 00:01:00").getTime();
+              
+              // Update the count down every 1 second
+              var x = setInterval(function() {
+                
+                // Get today's date and time
+                var now = new Date().getTime();
+                
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result in the element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+                
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("demo").innerHTML = "CHEGOU O DIA";
+                }
+              }, 1000);
+            </script>
+            <p>Estão ansiosos para o evento? Então confere aí uma contagem regressiva até a data do início da ADIC Woodstock.</p>            
           </div>
           
         </div>
